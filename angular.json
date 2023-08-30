@@ -96,6 +96,37 @@
           }
         }
       }
+    },
+    "googleplacesautocomplete": {
+      "projectType": "library",
+      "root": "projects/googleplacesautocomplete",
+      "sourceRoot": "projects/googleplacesautocomplete/src",
+      "prefix": "lib",
+      "architect": {
+        "build": {
+          "builder": "@angular-devkit/build-angular:ng-packagr",
+          "options": {
+            "project": "projects/googleplacesautocomplete/ng-package.json"
+          },
+          "configurations": {
+            "production": {
+              "tsConfig": "projects/googleplacesautocomplete/tsconfig.lib.prod.json"
+            },
+            "development": {
+              "tsConfig": "projects/googleplacesautocomplete/tsconfig.lib.json"
+            }
+          },
+          "defaultConfiguration": "production"
+        },
+        "test": {
+          "builder": "@angular-devkit/build-angular:karma",
+          "options": {
+            "main": "projects/googleplacesautocomplete/src/test.ts",
+            "tsConfig": "projects/googleplacesautocomplete/tsconfig.spec.json",
+            "karmaConfig": "projects/googleplacesautocomplete/karma.conf.js"
+          }
+        }
+      }
     }
   }
 }
