@@ -2,7 +2,7 @@ import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 
 import { AppComponent } from './app.component';
-import { GooglePlacesAutocompleteModule } from 'projects/googleplacesautocomplete/src/public-api';
+import { NgxGooglePlacesAutocompleteModule } from 'projects/googleplacesautocomplete/src/public-api';
 
 @NgModule({
   declarations: [
@@ -10,7 +10,7 @@ import { GooglePlacesAutocompleteModule } from 'projects/googleplacesautocomplet
   ],
   imports: [
     BrowserModule,
-    GooglePlacesAutocompleteModule.forRoot({apiKey:'AIzaSyAffcL4_htP5zm0JYZjgvvJR6OaDicuXzI'})
+    NgxGooglePlacesAutocompleteModule.forRoot({apiKey:'AIzaSyAffcL4_htP5zm0JYZjgvvJR6OaDicuXzI'})
   ],
   providers: [],
   bootstrap: [AppComponent]

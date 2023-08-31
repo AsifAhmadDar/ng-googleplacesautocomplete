@@ -1,19 +1,20 @@
 import { AfterViewInit, Directive, ElementRef, EventEmitter, Input, Output } from '@angular/core';
-import { GoogleplacesAutocompleteService } from './google-places-autocomplete.service';
+import { NgxGoogleplacesAutocompleteService } from './ngx-google-places-autocomplete.service';
 import { IPlace } from './interfaces/IPlace';
+import { IBounds } from './interfaces/IOptions';
 
 @Directive({
   selector: '[googleAutoComplete]'
 })
-export class AutocompleteDirective implements AfterViewInit {
+export class NgxAutocompleteDirective implements AfterViewInit {
 
   @Output() addressChange: EventEmitter<IPlace> = new EventEmitter();
   @Input() countries: Array<string> = [];
   @Input() fields: Array<string> = [];
-  @Input() bounds = <{ north: number, south: number, east: number, west: number }>{}
+  @Input() bounds:IBounds|null = null;
   @Input() strictBounds: boolean = true;
-  autocomplete: any;
-  constructor(private gs: GoogleplacesAutocompleteService, private elementRef: ElementRef) {
+  autocomplete:any={};
+  constructor(private gs: NgxGoogleplacesAutocompleteService, private elementRef: ElementRef) {
   }
   ngAfterViewInit(): void {
     this.initiate()

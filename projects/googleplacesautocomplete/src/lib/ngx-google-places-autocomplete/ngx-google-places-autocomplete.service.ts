@@ -1,20 +1,14 @@
 import { Inject, Injectable, Optional } from '@angular/core';
-import { GooglePlacesAutocompleteConfig } from './google-places-autocomplete.module';
+import { GooglePlacesAutocompleteConfig } from './ngx-google-places-autocomplete.module';
 declare var google: any;
 @Injectable({
   providedIn: 'root'
 })
-export class GoogleplacesAutocompleteService {
+export class NgxGoogleplacesAutocompleteService {
   private scriptElement!: HTMLScriptElement;
   autocomplete: any;
   constructor(@Inject('config') @Optional() private config: GooglePlacesAutocompleteConfig) {
   }
-
-  getConfig() {
-    return this.config.apiKey
-  }
-
-
 
   async initializeGooglePlaces(inputElement:HTMLInputElement,options?:any) {
     try {
@@ -34,6 +28,9 @@ export class GoogleplacesAutocompleteService {
     if (!this.config?.apiKey) {
       console.error('Please provide api key for google autocomplete')
       return false
+    }
+    if(this.scriptElement?.src){
+      return true
     }
     return new Promise((resolve, reject) => {
       this.scriptElement = document.createElement('script');

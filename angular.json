@@ -3,7 +3,7 @@
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
-    "ng-googleplacesautocomplete": {
+    "ngx-googleplacesautocomplete": {
       "projectType": "application",
       "schematics": {},
       "root": "",
@@ -13,7 +13,7 @@
         "build": {
           "builder": "@angular-devkit/build-angular:browser",
           "options": {
-            "outputPath": "dist/ng-googleplacesautocomplete",
+            "outputPath": "dist/ngx-googleplacesautocomplete",
             "index": "src/index.html",
             "main": "src/main.ts",
             "polyfills": "src/polyfills.ts",
@@ -64,10 +64,10 @@
           "builder": "@angular-devkit/build-angular:dev-server",
           "configurations": {
             "production": {
-              "browserTarget": "ng-googleplacesautocomplete:build:production"
+              "browserTarget": "ngx-googleplacesautocomplete:build:production"
             },
             "development": {
-              "browserTarget": "ng-googleplacesautocomplete:build:development"
+              "browserTarget": "ngx-googleplacesautocomplete:build:development"
             }
           },
           "defaultConfiguration": "development"
@@ -75,7 +75,7 @@
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n",
           "options": {
-            "browserTarget": "ng-googleplacesautocomplete:build"
+            "browserTarget": "ngx-googleplacesautocomplete:build"
           }
         },
         "test": {
