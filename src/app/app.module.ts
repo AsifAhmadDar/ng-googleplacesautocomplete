@@ -9,8 +9,7 @@ import { NgxGooglePlacesAutocompleteModule } from 'projects/googleplacesautocomp
     AppComponent
   ],
   imports: [
-    BrowserModule,
-    NgxGooglePlacesAutocompleteModule.forRoot({apiKey:'AIzaSyAffcL4_htP5zm0JYZjgvvJR6OaDicuXzI'})
+    BrowserModule
   ],
   providers: [],
   bootstrap: [AppComponent]
