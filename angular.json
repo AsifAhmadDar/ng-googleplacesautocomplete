@@ -97,23 +97,23 @@
         }
       }
     },
-    "googleplacesautocomplete": {
+    "ngx-places": {
       "projectType": "library",
-      "root": "projects/googleplacesautocomplete",
-      "sourceRoot": "projects/googleplacesautocomplete/src",
+      "root": "projects/ngx-googleplacesautocomplete",
+      "sourceRoot": "projects/ngx-googleplacesautocomplete/src",
       "prefix": "lib",
       "architect": {
         "build": {
           "builder": "@angular-devkit/build-angular:ng-packagr",
           "options": {
-            "project": "projects/googleplacesautocomplete/ng-package.json"
+            "project": "projects/ngx-googleplacesautocomplete/ng-package.json"
           },
           "configurations": {
             "production": {
-              "tsConfig": "projects/googleplacesautocomplete/tsconfig.lib.prod.json"
+              "tsConfig": "projects/ngx-googleplacesautocomplete/tsconfig.lib.prod.json"
             },
             "development": {
-              "tsConfig": "projects/googleplacesautocomplete/tsconfig.lib.json"
+              "tsConfig": "projects/ngx-googleplacesautocomplete/tsconfig.lib.json"
             }
           },
           "defaultConfiguration": "production"
@@ -121,9 +121,9 @@
         "test": {
           "builder": "@angular-devkit/build-angular:karma",
           "options": {
-            "main": "projects/googleplacesautocomplete/src/test.ts",
-            "tsConfig": "projects/googleplacesautocomplete/tsconfig.spec.json",
-            "karmaConfig": "projects/googleplacesautocomplete/karma.conf.js"
+            "main": "projects/ngx-googleplacesautocomplete/src/test.ts",
+            "tsConfig": "projects/ngx-googleplacesautocomplete/tsconfig.spec.json",
+            "karmaConfig": "projects/ngx-googleplacesautocomplete/karma.conf.js"
           }
         }
       }
